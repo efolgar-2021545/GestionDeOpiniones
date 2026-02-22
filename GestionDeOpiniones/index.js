@@ -1,22 +1,18 @@
-import { createApp } from './configs/app.js'
-import { dbConnection } from './configs/database.js'
-import { config } from './configs/config.js'
+import dotenv from 'dotenv';
+import { createApp } from './configs/app.js';
+import { dbConnection } from './configs/database.js';
 
-// Importamos modelos y asociaciones
-import './src/models/index.js'
-import { seedRoles } from './src/seed/role.seed.js'
-import { seedAdminGeneral } from './src/seed/admin.seed.js'
+dotenv.config();
 
-const app = createApp()
+const app = createApp();
+const PORT = process.env.PORT || 3006;
 
 const startServer = async () => {
-    await dbConnection()
-    await seedRoles()
-    await seedAdminGeneral()
+    await dbConnection();
 
-    app.listen(config.app?.port || process.env.PORT, () => {
-        console.log(`Servidor corriendo en el puerto: ${process.env.PORT}`)
-    })
-}
+    app.listen(PORT, () => {
+        console.log(`GESTOR DE OPINIONES API - corriendo en puerto ${PORT}`);
+    });
+};
 
-startServer()
+startServer();
