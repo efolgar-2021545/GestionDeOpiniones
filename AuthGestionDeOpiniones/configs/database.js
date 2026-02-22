@@ -15,11 +15,11 @@ export const sequelize = new Sequelize({
     password: process.env.DB_PASSWORD,
     logging: process.env.DB_SQL_LOGGING === 'true' ? console.log : false,
     define: {
-        freezeTableName: true, // Usar nombres exactos sin pluralización
+        freezeTableName: true,
         timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',
-        underscored: true, // Usar snake_case para todos los campos
+        underscored: true,
     },
     pool: {
         max: 10,
@@ -74,4 +74,4 @@ const gracefulShutdown = async (signal) => {
 // Handle different termination signals
 process.on('SIGINT', () => gracefulShutdown('SIGINT'));
 process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
-process.on('SIGUSR2', () => gracefulShutdown('SIGUSR2')); // For nodemon restarts
+process.on('SIGUSR2', () => gracefulShutdown('SIGUSR2'));

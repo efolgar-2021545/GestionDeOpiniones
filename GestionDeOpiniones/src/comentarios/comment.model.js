@@ -3,7 +3,7 @@ import { Schema, model } from 'mongoose';
 const commentSchema = new Schema({
     contenido: {
         type: String,
-        required: [true, 'El comentario es obligatorio :l']
+        required: [true, 'El comentario es obligatorio ']
     },
     postId: {
         type: Schema.Types.ObjectId,

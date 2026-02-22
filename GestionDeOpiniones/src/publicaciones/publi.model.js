@@ -7,11 +7,11 @@ const postSchema = new Schema({
     },
     categoria: {
         type: String,
-        required: [true, 'INGRESA UN CATEGORIA ;D']
+        required: [true, 'INGRESA UN CATEGORIA ']
     },
     contenido: {
         type: String,
-        required: [true, 'Tu post no puede ir vacio ;C']
+        required: [true, 'Tu post no puede ir vacio ']
     },
     autorId: {
         type: String,

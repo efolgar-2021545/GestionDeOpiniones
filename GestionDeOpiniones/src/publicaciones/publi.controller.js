@@ -32,14 +32,14 @@ export const updatePost = async (req, res) => {
         if (!post) {
             return res.status(404).json({
                 success: false,
-                message: 'No se encontro este post! >:c'
+                message: 'No se encontro este post! '
             });
         }
 
         if (post.autorId !== req.user.uid) {
             return res.status(403).json({
                 success: false,
-                message: 'Unicamente puedes editar los posts hechos por ti :p'
+                message: 'Unicamente puedes editar los posts hechos por ti '
             });
         }
 
@@ -71,7 +71,7 @@ export const deletePost = async (req, res) => {
         if (!post) {
             return res.status(404).json({
                 success: false,
-                message: 'No se encontro este post! >:c'
+                message: 'No se encontro este post! '
             });
         }
 
@@ -79,7 +79,7 @@ export const deletePost = async (req, res) => {
         ) {
             return res.status(403).json({
                 success: false,
-                message: 'NO ESTAS AUTORIZADO >p'
+                message: 'NO ESTAS AUTORIZADO '
             });
         }
 

@@ -11,7 +11,7 @@ export const seedRoles = async () => {
 
         if (!exists) {
             await Role.create({ name: roleName })
-            console.log(`Role ${roleName} creado satisfactorimante :D`)
+            console.log(`Role ${roleName} creado satisfactorimante `)
         }
     }
 }

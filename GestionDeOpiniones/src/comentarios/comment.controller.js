@@ -14,7 +14,7 @@ export const createComment = async (req, res) => {
         if (!postExists) {
             return res.status(404).json({
                 success: false,
-                message: 'El post no existe ;C'
+                message: 'El post no existe '
             });
         }
 
@@ -81,14 +81,14 @@ export const deleteComment = async (req, res) => {
         if (!comment) {
             return res.status(404).json({
                 success: false,
-                message: 'Comentario no encontrado :C'
+                message: 'Comentario no encontrado '
             });
         }
 
         if (comment.autorId !== req.user.uid) {
             return res.status(403).json({
                 success: false,
-                message: 'No estás autorizado para eliminar este comentario ;D'
+                message: 'No estás autorizado para eliminar este comentario '
             });
         }
 

@@ -13,7 +13,7 @@ export const sendVerificationEmail = async (email, token) => {
     const verificationLink = `http://localhost:3005/api/auth/verify/${token}`
 
     await transporter.sendMail({
-        from: `"Auth Gestor de Opiniones" <${process.env.EMAIL_USER}>`,
+        from: `"Auth Gestion De Opiniones" <${process.env.EMAIL_USER}>`,
         to: email,
         subject: 'Verifica tu cuenta!',
         html: `
