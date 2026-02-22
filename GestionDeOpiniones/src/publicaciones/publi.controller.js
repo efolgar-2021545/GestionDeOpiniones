@@ -87,7 +87,7 @@ export const deletePost = async (req, res) => {
 
         return res.json({
             success: true,
-            message: 'Se ha eliminado satisfactoriamente tu post =p'
+            message: 'Tu publicación se ha eliminado correctamente'
         });
 
     } catch (error) {

@@ -18,7 +18,7 @@ export const dbConnection = async () => {
         });
 
         mongoose.connection.on('open', () => {
-            console.log('MongoDB | conectado a la base de datos kinalBank');
+            console.log('MongoDB | conectado a la base de datos GestionDeOpiniones');
         });
 
         mongoose.connection.on('reconnected', () => {

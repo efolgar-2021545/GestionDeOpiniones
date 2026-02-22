@@ -7,15 +7,15 @@ export const seedAdminGeneral = async () => {
     })
 
     const exists = await User.findOne({
-        where: { email: 'adrian@gmail.com' }
+        where: { email: 'folgar@gmail.com' }
     })
 
     if (!exists) {
-        const hashedPassword = await hashPassword('Admin2024004')
+        const hashedPassword = await hashPassword('Admin2021545')
 
         await User.create({
             name: 'Super Admin',
-            email: 'adrian@gmail.com',
+            email: 'folgar@gmail.com',
             password: hashedPassword,
             roleId: adminRole.id,
             isActive: true
